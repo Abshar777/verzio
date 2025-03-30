@@ -1,4 +1,4 @@
-import Preloader from "./components/global/preloader";
+// import Preloader from "./components/global/preloader";
 import Header from "./components/global/header";
 import Hero from "./components/page-sections/hero";
 import Feature1 from "./components/page-sections/Feature1";
