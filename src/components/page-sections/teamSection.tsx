@@ -2,29 +2,39 @@ import React from "react";
 
 const teamMembers = [
   {
-    name: "Basheer PA",
-    role: "Impact Strategist & Coach",
-    img: "/images/avatar.jpg",
+    name: "ANAGHA K [M.A., B.Ed.] ",
+    role: "FLUENCY ARCHITECT",
+    img: "/images/anaga.jpeg",
+  },
+  {
+    name: "NAJILA HAWADHA [M.A, B.Ed.] ",
+    role: "CHAIR OF EXPERSSION",
+    img: "/images/najila.jpeg",
+  },
+  {
+    name: "BASHEER PA [M.A., B.Ed.] ",
+    role: "impact Strategist & Coach",
+    img: "/images/basheer.jpeg",
   },
   {
     name: "Nafila Shareefa MI",
     role: "Counsellor & Concept Developer",
-    img: "/images/avatar.jpg",
+    img: "/images/nafila.png",
   },
   {
-    name: "Najila Hawada",
-    role: "Content Curator & Language Specialist",
-    img: "/images/avatar.jpg",
+    name: "JINSH SHAJI  [M.A., B.Ed.] ",
+    role: "LINGUISTIC NAVIGATOR",
+    img: "/images/jinsh.jpeg",
   },
   {
-    name: "Jins Shaji",
-    role: "Grammarian & Bilingual Educator",
-    img: "/images/avatar.jpg",
+    name: "ARATHI  ",
+    role: "BRAND EXPERIENCE MAESTRO",
+    img: "/images/arathi.jpeg",
   },
   {
-    name: "Anagha K",
-    role: "Fluency Architect & Conversation Coach",
-    img: "/images/avatar.jpg",
+    name: "AKASH  ",
+    role: "ONLINE PRESCENCE INNOVATOR",
+    img: "/images/akash.jpeg",
   },
 ];
 

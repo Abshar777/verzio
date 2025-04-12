@@ -60,6 +60,15 @@ button {
 /*======================================
 	Header CSS
 ========================================*/
+
+.logo-img {
+  width: 100px;
+}
+@media (max-width: 768px) {
+  .logo-img {
+    width: 50px;
+  }
+}
 .header {
   position: relative;
 }

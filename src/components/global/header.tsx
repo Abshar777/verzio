@@ -9,8 +9,22 @@ const Header = () => {
                 <div className="row align-items-center">
                   <div className="col-lg-2 col-md-2 col-12">
                     <div className="logo">
-                      <div className="img-logo mt-0 menu_white nav main-menu menu navbar-nav menu_white">
-                        <a href="/">
+                      <div className=" mt-0 menu_white nav main-menu menu navbar-nav menu_white">
+                        <a href="/" className="d-flex align-items-center">
+                          <div  className="logo-img logo-white">
+                            <img
+                              style={{ scale: 0.7 }}
+                              src="/svg/logo.svg"
+                              alt="logo"
+                            />
+                          </div>
+                          <div  className="logo-img d-none logo-black">
+                            <img
+                              style={{ scale: 0.7 }}
+                              src="/svg/logo-black.svg"
+                              alt="logo"
+                            />
+                          </div>
                           <h1 className="header-text text-white">Verzio</h1>
                         </a>
                       </div>

@@ -8,11 +8,13 @@
       if ($(this).scrollTop() > 1) {
         $(".header").addClass("sticky");
         $(".header-text").removeClass("text-white");
-        console.log("sticky");
+        $(".logo-white").addClass("d-none");
+        $(".logo-black").removeClass("d-none");
       } else {
         $(".header").removeClass("sticky");
         $(".header-text").addClass("text-white");
-        console.log("not sticky");
+        $(".logo-white").removeClass("d-none");
+        $(".logo-black").addClass("d-none");
       }
     });
 

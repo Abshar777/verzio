@@ -20,7 +20,14 @@ const Footer: React.FC = () => {
             <div className="col-lg-5 col-md-6 col-12">
               {/* Footer About */}
               <div className="single-widget footer-about widget">
-                <a className="logo" href="index.html">
+                <a className="logo d-flex align-items-center"  href="index.html">
+                  <div style={{width: "100px"}} className="logo-img  logo-black">
+                    <img
+                      style={{ scale: 0.7 }}
+                      src="/svg/logo-black.svg"
+                      alt="logo"
+                    />
+                  </div>
                   <h1>Verzio</h1>
                 </a>
                 <p>
