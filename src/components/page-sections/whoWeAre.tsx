@@ -10,12 +10,12 @@ const WhoWeAre = () => {
                 src="/img/home9/card_img.png"
                 alt=""
               />
-              <img
+              {/* <img
                 className="shape right"
                 data-parallax='{"y": -60}'
                 src="/img/home9/card-2.png"
                 alt=""
-              />
+              /> */}
             </div>
           </div>
           <div className="col-lg-5 offset-lg-1">

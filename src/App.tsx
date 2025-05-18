@@ -17,7 +17,9 @@ function App() {
   return (
     <div id="page" className="site">
       {/* <Preloader /> */}
+
       <Header />
+      
       <Hero />
       <Feature1 />
       <OurCore />

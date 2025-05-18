@@ -31,14 +31,11 @@ const OurVission = () => {
           </div>
           <div className="col-lg-6">
             <div
-              className="agency_features_img wow fadeInLeft"
+
+              className="agency_features_img  md:flex items-center justify-center wow fadeInLeft"
               data-wow-delay="0.1s"
             >
-              <img
-                style={{ borderRadius: "15px" }}
-                src="/img/home-7/business_img.jpg"
-                alt="Business"
-              />
+              <video className="w-[25rem] rounded-lg ]" src="/videos/3.mp4" autoPlay muted loop />
             </div>
           </div>
         </div>

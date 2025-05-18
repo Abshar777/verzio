@@ -3,7 +3,7 @@ import React from "react";
 const verzioPrograms = [
 
   {
-    title: "3-Month Program",
+    title: "Beginning",
     price: "$299",
     delay: "0.2s",
     features: [
@@ -15,7 +15,7 @@ const verzioPrograms = [
     ],
   },
   {
-    title: "6-Month Program",
+    title: "Middle",
     price: "$499",
     delay: "0.3s",
     features: [
@@ -27,7 +27,7 @@ const verzioPrograms = [
     ],
   },
   {
-    title: "1-Year Program",
+    title: "Advanced",
     price: "$899",
     delay: "0.4s",
     features: [

@@ -1,67 +1,141 @@
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
 const OurCore = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Transform values for parallax effects
+  const videoY = useTransform(scrollYProgress, [0, 1], [50, -50]);
+  const shapeBottomY = useTransform(scrollYProgress, [0, 1], [0, 50]);
+  const shapeLeftY = useTransform(scrollYProgress, [0, 1], [0, -70]);
+  const shapeRightY = useTransform(scrollYProgress, [0, 1], [0, 40]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+
+  // Staggered animation for list items
+  const listVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.1 * i,
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    })
+  };
+
   return (
-    <section className="agency_features_area consulting_features_area_two">
+    <section ref={sectionRef} className="agency_features_area consulting_features_area_two">
       <div className="container custom_container">
         <div className="row agency_features_item agency_features_item_three flex-row-reverse align-items-center">
           <div className="col-lg-6">
-            <div className="agency_features_img text-center">
-              <img
-                className="img_border_radius"
-                src="/img/home9/man.png"
-                alt=""
+            <motion.div 
+              ref={videoRef}
+              className="agency_features_img text-center"
+              style={{ y: videoY }}
+            >
+              <motion.video
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                style={{ width: "25rem", borderRadius: "20px" }}
+                src="/videos/2.mp4"
+                autoPlay
+                muted
+                loop
               />
-              <img
+              <motion.img
                 className="shape bottom"
-                data-parallax='{"x": 0, "y": 50, "rotateZ": 0}'
+                style={{ y: shapeBottomY }}
                 src="/img/home9/line.png"
                 alt=""
               />
-              <img
-                data-parallax='{"y": -70}'
+              {/* <motion.img
                 className="shape left"
+                style={{ y: shapeLeftY }}
                 src="/img/home9/text.png"
                 alt=""
-              />
-              <img
-                data-parallax='{"y": 40}'
+              /> */}
+              <motion.img
                 className="shape right"
+                style={{ y: shapeRightY }}
                 src="/img/home9/round.png"
                 alt=""
               />
-            </div>
+            </motion.div>
           </div>
 
           <div className="col-lg-6">
-            <div className="agency_features_content pe-5">
-              <h2 className="agency_title_two text-start">Our Core Values</h2>
+            <motion.div
+              ref={contentRef}
+              className="agency_features_content pe-5"
+              style={{ y: contentY, opacity: contentOpacity }}
+            >
+              <motion.h2 
+                className="agency_title_two text-start"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                Our Core Compitance
+              </motion.h2>
               <div className="features_list">
-                <div className="f_list_item">
-                  <h4>English Communication Program</h4>
-                  <p>Strengthen grammar, vocabulary, and fluency.</p>
-                </div>
-                <div className="f_list_item">
-                  <h4>Faculty Dynamation </h4>
-                  <p>
-                    Transform teaching skills through leadership & presentation
-                    training.
-                  </p>
-                </div>
-                <div className="f_list_item">
-                  <h4>Innovative Learning Approach </h4>
-                  <p>
-                    Interactive sessions, real-time practice & reinforcement.
-                  </p>
-                </div>
-                <div className="f_list_item">
-                  <h4>Flexible Learning </h4>
-                  <p>Online & offline training tailored as per requirement</p>
-                </div>
+                {[
+                  {
+                    title: "English Communication Program",
+                    desc: "Strengthen grammar, vocabulary, and fluency."
+                  },
+                  {
+                    title: "Faculty Dinamation",
+                    desc: "Transform teaching skills through leadership & presentation training."
+                  },
+                  {
+                    title: "Innovative Learning Approach",
+                    desc: "Interactive sessions, real-time practice & reinforcement."
+                  },
+                  {
+                    title: "Flexible Learning",
+                    desc: "Online & offline training tailored as per requirement"
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="f_list_item"
+                    custom={index}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={listVariants}
+                  >
+                    <h4>{item.title}</h4>
+                    <p>{item.desc}</p>
+                  </motion.div>
+                ))}
               </div>
-              <a href="#" className="theme_btn_two hover_effect">
+              <motion.a
+                href="#"
+                className="theme_btn_two hover_effect"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 Get Certified Today!{" "}
                 <i className="fa-solid fa-arrow-right-long"></i>
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           </div>
         </div>
       </div>

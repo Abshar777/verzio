@@ -35,7 +35,7 @@ const MoreCourses: React.FC = () => {
           className="agency_title_two text-center wow fadeInUp"
           data-wow-delay="0.1s"
         >
-          More Courses
+          Other verticles -more course
         </h2>
         <div className="row justify-content-center">
           <div className="col-lg-10">
