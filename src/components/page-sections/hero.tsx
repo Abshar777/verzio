@@ -110,7 +110,7 @@ const AgencyBanner = () => {
               className="agency_banner_img_two text-end wow fadeInUp"
               data-wow-delay="0.6s"
             >
-              <img className="img" src="/img/home-7/business_img.jpg" alt="" />
+              <img  className="img" src="/images/hero2.jpg" alt="" />
             </div>
           </div>
         </div>
