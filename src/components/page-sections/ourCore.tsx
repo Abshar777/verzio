@@ -14,7 +14,7 @@ const OurCore = () => {
   // Transform values for parallax effects
   const videoY = useTransform(scrollYProgress, [0, 1], [50, -50]);
   const shapeBottomY = useTransform(scrollYProgress, [0, 1], [0, 50]);
-  const shapeLeftY = useTransform(scrollYProgress, [0, 1], [0, -70]);
+  // const shapeLeftY = useTransform(scrollYProgress, [0, 1], [0, -70]);
   const shapeRightY = useTransform(scrollYProgress, [0, 1], [0, 40]);
   const contentY = useTransform(scrollYProgress, [0, 1], [100, 0]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
