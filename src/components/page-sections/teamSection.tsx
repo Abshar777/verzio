@@ -19,7 +19,7 @@ const teamMembers = [
   {
     name: "Nafila Shareefa MI",
     role: "Counsellor & Concept Developer",
-    img: "/images/nafila.png",
+    img: "/images/nafila.jpeg",
   },
   {
     name: "JINSH SHAJI  [M.A., B.Ed.] ",
@@ -28,7 +28,7 @@ const teamMembers = [
   },
   {
     name: "ARATHI  ",
-    role: "BRAND EXPERIENCE MAESTRO",
+    role: "REACH AMBASSADOR",
     img: "/images/arathi.jpeg",
   },
   {

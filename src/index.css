@@ -61,6 +61,11 @@ button {
 	Header CSS
 ========================================*/
 
+
+.collapse {
+  /* visibility: collapse; */
+  visibility: visible !important;
+}
 .logo-img {
   width: 100px;
 }
